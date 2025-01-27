@@ -37,7 +37,7 @@ class Producto:
 
 class Pedido:
 
-    def __innit__(self, productos, cantidades):
+    def __init__(self, productos, cantidades):
         self.__productos = productos
         self.__cantidades = cantidades
 
@@ -45,7 +45,7 @@ class Pedido:
         total = 0
         for(p, c) in zip(self.__productos, self.__cantidades):
             total += p.calcular_total(c)
-            return total
+        return total
     
     def mostrar_pedido(self):
         for(p, c) in zip(self.__productos, self.__cantidades):
